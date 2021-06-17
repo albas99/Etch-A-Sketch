@@ -1,0 +1,27 @@
+:root{
+    --grid-columns: 1;
+    --grid-rows: 1;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    text-align: center;
+}
+
+.divs-container{
+    border: 2px solid black;
+    width: 50%;
+    height: 80vh;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+}
+
+.divs{
+    border: 1px solid black;
+}
