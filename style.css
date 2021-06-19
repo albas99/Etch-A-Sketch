@@ -12,11 +12,17 @@ h1{
     text-align: center;
 }
 
+.container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
 .divs-container{
     border: 2px solid black;
     width: 50%;
     height: 80vh;
-    margin: 50px;
     display: grid;
     grid-template-columns: repeat(var(--grid-columns), 1fr);
     grid-template-rows: repeat(var(--grid-rows), 1fr);
@@ -24,4 +30,11 @@ h1{
 
 .divs{
     border: 1px solid black;
+}
+
+.control-buttons{
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-rows: repeat(3, 50px);
+
 }
