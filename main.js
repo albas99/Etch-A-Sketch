@@ -1,5 +1,5 @@
 let divsContainer = document.querySelector('.divs-container');
-let resestButton = document.querySelector('.reset-button');
+let resetButton = document.querySelector('.reset');
 let selectGridButton = document.querySelector('.select-grid');
 let removeBordersButton = document.querySelector('.remove-borders');
 window.addEventListener('load', createDivGrid(16, 16));
@@ -55,4 +55,26 @@ function clearGrid() {
     });
 }
 
+function resetColor() {
+    let divs = document.querySelectorAll('div');
+    divs.forEach(div => div.style.backgroundColor = 'white');
+}
+
+function toggleBorders() {
+    let divs = Array.from(divsContainer.childNodes);
+    divs.forEach((div) => {
+        if (div.style.border === 'none') {
+            div.style.border = '1px solid black';
+        }
+        else {
+            div.style.border = 'none';
+        }
+    });
+}
+
+
+
+// resetColor()
 selectGridButton.addEventListener('click', selectGridSize);
+resetButton.addEventListener('click', resetColor);
+removeBordersButton.addEventListener('click', toggleBorders);
